@@ -13,7 +13,6 @@ import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
-import javax.swing.text.html.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -116,7 +115,7 @@ public class OptionalGetterProcessor extends AbstractAnnotationProcessor {
             javaWriter.writeTemplate("/true.tpl", model);
             javaWriter.close();
         } catch (IOException e) {
-            wrappedTypeElement.compilerMessage().asError().write(trueProcessorMessages.ERROR_COULD_NOT_CREATE_CLASS, filePath, e.getMessage());
+            wrappedTypeElement.compilerMessage().asError().write(OptionalGetterProcessorMessages.ERROR_COULD_NOT_CREATE_CLASS, filePath, e.getMessage());
         }
     }
 

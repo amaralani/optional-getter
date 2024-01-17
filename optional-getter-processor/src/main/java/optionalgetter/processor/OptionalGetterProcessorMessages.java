@@ -1,14 +1,11 @@
 package optionalgetter.processor;
 
-true.processor;
-
-
-import io.toolisticon.aptk.tools.corematcher.ValidationMessage;
+import io.toolisticon.aptk.tools.corematcher.*;
 
 /**
  * Messages used by annotation processors.
  */
-public enum trueProcessorMessages implements ValidationMessage {
+public enum OptionalGetterProcessorMessages implements ValidationMessage {
 
     // TODO: Replace this by your own error messages
     ERROR_COULD_NOT_CREATE_CLASS("true_ERROR_001", "Could not create class ${0} : ${1}"),
@@ -30,7 +27,7 @@ public enum trueProcessorMessages implements ValidationMessage {
      * @param code    the message code
      * @param message the message text
      */
-        trueProcessorMessages(String code, String message) {
+    OptionalGetterProcessorMessages(String code, String message) {
         this.code = code;
         this.message = message;
     }

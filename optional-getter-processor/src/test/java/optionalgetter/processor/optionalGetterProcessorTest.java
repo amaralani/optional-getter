@@ -44,7 +44,7 @@ public class optionalGetterProcessorTest {
         compileTestBuilder
                 .addSources(JavaFileObjectUtils.readFromResource("testcases/TestcaseInvalidUsageWithEmptyValue.java"))
                 .compilationShouldFail()
-                .expectErrorMessageThatContains(trueProcessorMessages.ERROR_VALUE_MUST_NOT_BE_EMPTY.getCode())
+                .expectErrorMessageThatContains(OptionalGetterProcessorMessages.ERROR_VALUE_MUST_NOT_BE_EMPTY.getCode())
                 .executeTest();
     }
 
